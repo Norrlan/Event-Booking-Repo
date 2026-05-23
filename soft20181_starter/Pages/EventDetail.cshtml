@@ -1,0 +1,105 @@
+@page
+@model soft20181_starter.Pages.EventDetailModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Event Details Page";
+    var selectedEvent = Model.theEvent!;
+
+    var coverPhoto = selectedEvent.CoverPhoto ?? string.Empty;
+    coverPhoto = coverPhoto.Replace("\\", "/");
+    var imagePath = coverPhoto.StartsWith("/") || coverPhoto.StartsWith("http")
+        ? coverPhoto
+        : $"/IMAGES/{coverPhoto}";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ca93055bb3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/details.css">
+    <title>@selectedEvent.Title - Eventbox</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="SignUp" class="no-change">Sign Up</a></li>
+            <li><a href="Login" class="no-change">Log In</a></li>
+            <div class="no-change">
+                <div class="Logo">
+                    <label>Eventbox</label>
+                </div>
+            </div>
+        </ul>
+
+        <div class="topnav" id="myTopnav">
+            <i class="fa-solid fa-sun" style="font-size:35px; padding-right: 5px;" onclick="switchToLightMode()"></i>
+            <i class="fa-solid fa-moon" style="font-size:35px; padding:5px;" onclick="switchToDarkMode()"></i>
+            <i class="fa-solid fa-plus" style="font-size:35px; padding: 5px;" onclick="increaseFontsize()"></i>
+            <i class="fa-solid fa-minus" style="font-size: 35px; padding: 5px;" onclick="decreaseFontsize()"></i>
+            <a href="Index">Home</a>
+            <a href="AddEvent">CreateEvent</a>
+            <a href="Events">Events</a>
+            <a href="EventDetail" class="active">Details</a>
+            <a href="Contact">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="detail-page">
+        <section class="detail-hero">
+            <img src="@imagePath" alt="@selectedEvent.Title" onerror="this.src='/IMAGES/A24.jpg';" />
+        </section>
+
+        <section class="detail-shell">
+            <a class="back-link" href="Events">Back to events</a>
+            <p class="event-status">Tickets available</p>
+            <h1>@selectedEvent.Title</h1>
+
+            <div class="event-facts">
+                <p><i class="fa-solid fa-location-dot"></i> @selectedEvent.ELocation</p>
+                <p><i class="fa-solid fa-calendar-days"></i> @selectedEvent.EventStartDate.ToString("dddd dd MMMM yyyy")</p>
+                <p><i class="fa-solid fa-clock"></i> @selectedEvent.EventStartTime.ToString("HH:mm") - @selectedEvent.EventEndTime.ToString("HH:mm")</p>
+                <p><i class="fa-solid fa-ticket"></i> @selectedEvent.TicketsAvailable tickets available</p>
+            </div>
+        </section>
+
+        <section class="detail-description">
+            <h2>About this event</h2>
+            <p>@selectedEvent.EventDescription</p>
+        </section>
+    </main>
+
+    @if (!string.IsNullOrWhiteSpace(Model.TicketMessage))
+    {
+        <div class="ticket-message @Model.TicketMessageType">
+            @Model.TicketMessage
+        </div>
+    }
+
+    <aside class="ticket-bar">
+        <div>
+            <strong>£@selectedEvent.Price.ToString("0.00")</strong>
+            <span>@selectedEvent.EventStartDate.ToString("ddd dd MMM") · @selectedEvent.EventStartTime.ToString("HH:mm")</span>
+        </div>
+        <form method="post" asp-page-handler="GetTickets" asp-route-id="@selectedEvent.Id" class="ticket-form">
+            <label for="TicketQuantity" class="ticket-label">Tickets</label>
+            <input id="TicketQuantity"
+                   name="TicketQuantity"
+                   type="number"
+                   min="1"
+                   max="@selectedEvent.TicketsAvailable"
+                   value="1"
+                   class="ticket-quantity"
+                   disabled="@(selectedEvent.TicketsAvailable <= 0)" />
+            <button type="submit" class="ticket-button" disabled="@(selectedEvent.TicketsAvailable <= 0)">
+                @(selectedEvent.TicketsAvailable <= 0 ? "Sold out" : "Get tickets")
+            </button>
+        </form>
+    </aside>
+</body>
+</html>

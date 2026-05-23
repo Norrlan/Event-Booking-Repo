@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "events.css" >
+    <link rel="stylesheet" type="text/css" href="events.css" media="all" />
+    <script src="https://kit.fontawesome.com/ca93055bb3.js" crossorigin="anonymous"></script>
+    <title>Elysium Events</title>
+</head>  
+<body>
+    <ul>
+        <li> <a href="C:\Users\obabi\Desktop\EVENT BROOKER\SignUp.html"> Sign Up </a></li>
+        <li> <a href="C:\Users\obabi\Desktop\EVENT BROOKER\LogIn.html">Log In     </a> </li>
+
+        <div class="Logo">
+            <label>Eventbox </label>
+        </div>
+    </ul>
+
+
+    <div class="topnav" id="myTopnav">
+
+
+        </form>
+        <a href="C:\Users\obabi\Desktop\EVENT BROOKER\contact.html">Contact</a>
+        <a href="C:\Users\obabi\Desktop\EVENT BROOKER\event-detail.html"> Details </a>
+        <a href="#events" class="active"> Events </a>
+        <a href="C:\Users\obabi\Desktop\EVENT BROOKER\index.html">Home</a>
+        <!--this contains the icons that would be displayed in the top left section of the topnav-->
+        <i class="fa-solid fa-sun" style="font-size:30px; padding: 10px;">  </i>
+        <i class="fa-solid fa-moon" style="font-size:30px;padding: 10px;"></i>
+        <i class="fa-solid fa-plus" style="font-size:30px;padding: 10px;"></i>
+        <i class="fa-solid fa-minus" style="font-size:30px;padding: 10px;"></i>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <!--Got inspiration from
+     https://www.warble-entertainment.com/entertainers/unique-corporate
+     -ideas?msclkid=52fa84a045a2115bce54e1d6632e4cac&utm_source=bing&utm
+     _medium=cpc&utm_campaign=Corporate%20Entertainment&utm
+     _term=corporate%20entertainment%20hire&utm_content=Corporate%20Entertainment-->
+    <!--Drop content talking about stuff we can explore.
+    Then drop a button that can help create  and book -->
+
+    <!-- <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search events by name">
+        <select id="locationFilter">
+            <option value="">Filter by location</option>
+            <option value="Nottingham">Nottingham</option>
+            <option value="Derby">Derby</option>
+            <option value="Sheffield">Sheffield</option>
+        </select>
+        <select id="dateFilter">
+            <option value="">Filter by date</option>
+            <option value="2 and 3 Dec">2 and 3 Dec</option>
+            <option value="9 Dec">9 Dec</option>
+            <option value="7 Nov - 31 Dec">7 Nov - 31 Dec</option>
+            <option value="25 Nov - 1 Dec">25 Nov - 1 Dec</option>
+            <option value="Aug 31">Aug 31</option>
+            <option value="9th Dec-9th Jan">9th Dec-9th Jan</option>
+        </select>
+        <button onclick="submitUserData()">Submit</button>
+    </div>-->
+    <p>
+        Unlock a world of possibilities with our event recommendations.
+        Whether you're a seasoned local or a first-time visitor,
+        there's always something new to discover."
+        From cultural festivals to live performances,
+        dive into the a maze of events at the touch of a button.
+    </p>
+
+
+    <!-- Search and Filter Section -->
+    <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search events by name">
+        <select id="locationFilter">
+            <option value="">Filter by location</option>
+            <option value="Nottingham">Nottingham</option>
+            <option value="Derby">Derby</option>
+            <option value="Sheffield">Sheffield</option>
+        </select>
+        <select id="dateFilter">
+            <option value="">Filter by date</option>
+            <option value="2 and 3 Dec">2 and 3 Dec</option>
+            <option value="9 Dec">9 Dec</option>
+            <option value="7 Nov - 31 Dec">7 Nov - 31 Dec</option>
+            <option value="25 Nov - 1 Dec">25 Nov - 1 Dec</option>
+            <option value="Aug 31">Aug 31</option>
+            <option value="9th Dec-9th Jan">9th Dec-9th Jan</option>
+        </select>
+        <button onclick="submitUserData()">Submit</button>
+    </div>
+
+
+
+    <br> <br> <br>
+    <h2>Related Events </h2>
+
+    <div id="container">
+
+
+
+    </div>
+
+
+
+    <br> <br> <br>
+
+
+    <hr class="solid">
+
+
+    <div class="icon-box">
+
+        <div class="shapes">
+            <i class="fa-solid fa-user-clock" style="font-size:60px;"> </i>
+            <p>24hrs Customer Service</p>
+        </div>
+
+        <div class="shapes">
+            <i class="fa-solid fa-lock" style="font-size:60px;"></i>
+            <p>Secure Bookings</p>
+        </div>
+
+        <div class="shapes">
+            <i class="fa-solid fa-people-group" style="font-size:60px;"></i>
+            <p>Group Discounts</p>
+        </div>
+
+        <div class="shapes">
+            <i class="fa-solid fa-trophy" style="font-size:60px;"></i>
+            <p>Loyalty Bonus</p>
+        </div>
+
+    </div>
+    <br>
+
+    </div>
+
+
+    <div class="Footer">
+
+        <div class="column">
+            <h4>Elysium</h4>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\welcome.html"> Welcome </a> </p>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\index.html">Home </a></p>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\index.html#prize">Prices</a></p>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\event-detail.html">Details </a>  </p>
+        </div>
+
+        <div class="column">
+            <h4>Events</h4>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\events.html">Find</a></p>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\event-detail.html#Nottingham-1">Nottingham</a></p>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\event-detail.html#Derby-1">Derby</a></p>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\event-detail.html#Sheffield-1">Sheffield</a></p>
+        </div>
+
+
+        <div class="column">
+            <h4>Support</h4>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\contact.html">Contact</a></p>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\Support.html#FAQ">FAQ's </a></p>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\Support.html#Complaints">Complaints</a></p>
+            <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\Support.html">Refund </a></p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class=" copyright">
+        <p>Oluwanifise Korede Obabire N1116021 © Elysium 2023</p>
+    </div>
+
+
+    <script>
+
+        // Function to create a card deck for the events page
+        function createCardDeck1() {
+            var cardDeck1 = document.createElement("div");
+            cardDeck1.classList.add("Card-deck-1");
+
+            // Create event cards using the createEventCard function and append them to the card deck
+            var eventCard1 = createEventCard(
+                "C:/Users/obabi/Desktop/EVENT BROOKER/imagez/A30.jpg",
+                "Victorian Christmas Market", "(Sheffield)",
+                "2 and 3 Dec",
+                "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html");
+            cardDeck1.appendChild(eventCard1);
+
+            var eventCard2 = createEventCard(
+                "C:/Users/obabi/Desktop/EVENT BROOKER/imagez/A35.jpg",
+                "Firth Park Xmas Market ",
+                "(Sheffield)", " 9 Dec",
+                "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html#Sheffield-2");
+            cardDeck1.appendChild(eventCard2);
+
+            var eventCard3 = createEventCard(
+                "imagez/A33.jpg",
+                "Winter Wonderland",
+                "(Nottingham)",
+                " 7 Nov - 31 Dec",
+                "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html#Nottingham-1");
+            cardDeck1.appendChild(eventCard3);
+
+
+            return cardDeck1;
+        }
+
+
+        function createCardDeck2() {
+            var cardDeck2 = document.createElement("div");
+            cardDeck2.classList.add("Card-deck-2");
+
+            var eventCard1 = createEventCard(
+                "C:/Users/obabi/Desktop/EVENT BROOKER/imagez/A34.jpg",
+                "Narnia at Newstead",
+                "(Nottingham)",
+                "25 Nov - 1 Dec",
+                "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html#Nottingham-2");
+            cardDeck2.appendChild(eventCard1);
+
+            var eventCard2 = createEventCard(
+                "C:/Users/obabi/Desktop/EVENT BROOKER/imagez/A31.webp",
+                "Ultimtate 90s Party ", "(Derby)",
+                " Aug 31",
+                "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html#Derby-1");
+            cardDeck2.appendChild(eventCard2);
+
+            var eventCard3 = createEventCard(
+                "C:/Users/obabi/Desktop/EVENT BROOKER/imagez/A32.webp",
+                "VR Northern Lights Experience ",
+                "(Derby)", " 9th Dec-9th Jan",
+                "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html#Derby-2");
+            cardDeck2.appendChild(eventCard3);
+
+
+            return cardDeck2;
+        }
+
+        // Call the function to create a card deck
+        var cdeck1 = createCardDeck1();
+        // append to the body
+        document.getElementById("container").appendChild(cdeck1);
+        //call the function to create an event card
+
+        // repeat for card deck 2
+
+        var cdeck2 = createCardDeck2();
+
+        document.getElementById("container").appendChild(cdeck2);
+
+
+
+        function myFunction() {
+            // function to make responsive topnav
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        //function to create a card Deck from JSON data
+        function createCardFromJson(jsonData) {
+            var cardDeck = document.createElement("div");
+            cardDeck.classList.add(jsonData.deckClass);
+
+            jsonData.events.forEach(function (eventData) {
+                var eventCard = createEventCard(eventData.imageSrc,
+                    eventData.eventName, eventDate.place, eventData.datename, eventData.link);
+            });
+
+            return cardDeck;
+        }
+
+        // Function to create an Event card
+        function createEventCard(imageSrc, eventName, place, datename, link) {
+            const eventCard = document.createElement("div");
+            eventCard.classList.add("Event-card");
+
+            //creating zoom container from the comments above
+            // It holds the link and the image
+
+            var zoomdiv = document.createElement("div");
+            zoomdiv.classList.add("zoom");
+
+            // This is for <a href> </a> I have named it Link
+            var Link = document.createElement("a");
+            Link.href = link;
+
+            // for the images used
+            var imagetag = document.createElement("img");
+            imagetag.src = imageSrc;
+            imagetag.style.width = "250px";
+            imagetag.style.height = "140px";
+
+            Link.appendChild(imagetag);
+            zoomdiv.appendChild(Link);
+
+            // create the card-container that houses the eventname,place and date
+
+            var cardContainer = document.createElement("div");
+            cardContainer.classList.add("card-container");
+
+
+            // the header contains the event name
+            var header = document.createElement("h4");
+            header.innerHTML = "<b>" + eventName + "</b>";
+
+            // create the p elements for the location and date
+            var locatep = document.createElement("p");
+            locatep.innerText = place || " ";
+            locatep.id = "s1";
+
+            var datep = document.createElement("p");
+            datep.innerHTML = "<b>" + datename + "</b>";
+            datep.id = "s2";
+
+
+            //Append the the paragraphs to card-container div
+            cardContainer.appendChild(header);
+            cardContainer.appendChild(locatep);
+            cardContainer.appendChild(datep);
+
+            //Append both zoom and card container divs to event-Card div
+            eventCard.appendChild(zoomdiv);
+            eventCard.appendChild(cardContainer);
+
+            return eventCard;
+        }
+
+        /* */
+
+
+
+
+        // Function to handle search functionality
+        function searchEvents() {
+            // Get the input value from the search box
+            var input = document.getElementById("searchInput").value.toUpperCase();
+            // Get the container of event cards
+            var container = document.getElementById("container");
+            // Get all event cards
+            var cards = container.getElementsByClassName("Event-card");
+
+            // Loop through all event cards
+            for (var i = 0; i < cards.length; i++) {
+                var eventName = cards[i].getElementsByClassName("card-container")[0].getElementsByTagName("h4")[0];
+                // If the event name matches the search input, display the card, otherwise hide it
+                if (eventName.innerHTML.toUpperCase().indexOf(input) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        // Function to handle filter functionality
+        function filterEvents(searchInput, locationFilter, dateFilter) {
+            // Get all event cards
+            var eventCards = document.getElementsByClassName("Event-card");
+
+            // Iterate through each event card
+            for (var i = 0; i < eventCards.length; i++) {
+                var eventCard = eventCards[i];
+                var eventName = eventCard.querySelector(".card-container h4").innerText;
+                var eventLocation = eventCard.querySelector(".card-container #s1").innerText;
+                var eventDate = eventCard.querySelector(".card-container #s2").innerText;
+
+                // Apply filtering based on user input
+                var isNameMatch = eventName.toLowerCase().includes(searchInput.toLowerCase());
+                var isLocationMatch = locationFilter === "" || eventLocation.toLowerCase() === locationFilter.toLowerCase();
+                var isDateMatch = dateFilter === "" || eventDate.toLowerCase().includes(dateFilter.toLowerCase());
+
+                // Hide or show event card based on filtering criteria
+                if (isNameMatch && isLocationMatch && isDateMatch) {
+                    eventCard.style.display = "block"; // Show event card
+                } else {
+                    eventCard.style.display = "none"; // Hide event card
+                }
+            }
+        }
+        function submitUserData() {
+            // Retrieve user input
+            var searchInput = document.getElementById("searchInput").value;
+            var locationFilter = document.getElementById("locationFilter").value;
+            var dateFilter = document.getElementById("dateFilter").value;
+
+            // You can perform actions with the user data here, such as filtering events based on the input values
+            console.log("User Input:");
+            console.log("Search Input:", searchInput);
+            console.log("Location Filter:", locationFilter);
+            console.log("Date Filter:", dateFilter);
+
+            // Example: You can call a function to filter events based on user input
+            filterEvents(searchInput, locationFilter, dateFilter);
+        }
+        //Fetch JSON data and create card decks
+        fetch('C:\\Users\\obabi\\Desktop\\EVENT BROOKER\\events.json')
+            .then(response => response.json)
+            .then(jsonData => {
+                var cardDeck1 = createCardDeckFromJson(jsonData.cardDeck1);
+                var cardDeck1 = createCardDeckFromJson(jsonData.cardDeck1);
+
+                document.getElementById("container").appendChild(cardDeck1);
+                document.getElementById("container").appendChild(cardDeck2);
+            });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if preferences are stored in Local Storage
+            const storedFontSize = localStorage.getItem("fontSize") || "30px";
+            const storedBgColor = localStorage.getItem("bgColor") || "#808080"; // Updated default body background color for dark mode
+            const storedTextColor = localStorage.getItem("textColor") || "#ccc"; // Default text color for dark mode
+            const storedNavColor = localStorage.getItem("navColor") || "rgb(217, 129, 15)"; // Updated default topnav background color for dark mode
+
+            // Apply stored preferences or defaults
+            document.body.style.backgroundColor = storedBgColor;
+            document.body.style.color = storedTextColor;
+            document.getElementById("myTopnav").style.backgroundColor = storedNavColor;
+
+            // Set initial font size for header elements
+            setFontSize(storedFontSize);
+
+            // Handle user interaction to change preferences
+
+
+            document.querySelector(".fa-sun").addEventListener("click", function () {
+
+                document.querySelector(".fa-moon").addEventListener("click", function () {
+                    // Switch to dark mode
+                    changeColor("#333", "#ccc", "rgb(217, 129, 15)"); // Update body background color, text color, and topnav background color
+                });
+
+                // Switch to light mode
+                changeColor("#808080", "333", "#808080"); // Update body background color and topnav text color
+            });
+            document.querySelector(".fa-plus").addEventListener("click", function () {
+                // Increase font size
+                changeFontSize(5);
+            });
+
+            document.querySelector(".fa-minus").addEventListener("click", function () {
+                // Decrease font size
+                changeFontSize(-2);
+            });
+
+            // Function to change font size
+            function changeFontSize(change) {
+                const currentSize = parseInt(getComputedStyle(document.body).fontSize);
+                const newSize = currentSize + change;
+                setFontSize(newSize + "px");
+                // Save preference to Local Storage
+                localStorage.setItem("fontSize", newSize + "px");
+            }
+
+            // Function to set font size for header elements
+            function setFontSize(fontSize) {
+                document.querySelectorAll("h1, h2, h3, h4, p").forEach((header) => {
+                    header.style.fontSize = fontSize;
+                });
+            }
+
+            // Function to change background color and text color
+            function changeColor(bgColor, textColor, navColor) {
+                document.body.style.backgroundColor = bgColor;
+                document.body.style.color = textColor;
+                document.getElementById("myTopnav").style.backgroundColor = navColor;
+                // Save preferences to Local Storage
+                localStorage.setItem("bgColor", bgColor);
+                localStorage.setItem("textColor", textColor);
+                localStorage.setItem("navColor", navColor);
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

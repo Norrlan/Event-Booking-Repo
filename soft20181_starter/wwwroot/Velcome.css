@@ -1,0 +1,274 @@
+
+
+*{
+  box-sizing:border-box;
+}
+body
+{
+    margin: 0;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: #555;
+}
+
+
+ul{ 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:black;
+  position: -webkit-sticky; /* Safari */
+  position:relative;
+  top: 0;
+}
+li{
+  float: right;
+
+}
+li a { /* remove text-decoration and make the anchorlinks to be block*/
+  display:block;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover{ /* background - colour */
+  background-color:#FFFEF2;
+  color: #333;
+}
+
+ul li a.active{ /* To make active page stand out.*/
+  background-color:#555;
+  color: white;
+}
+
+
+
+label
+{
+  font-size: 47px;
+  float: left;
+  color: #FFFEF2;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+label:hover {
+  color:rgb(217, 129, 15);
+}
+
+@media screen and (max-width:600px)
+{
+label{
+  padding-top: 6px;
+  font-size: 27px;
+}
+}
+.topnav{
+  background-color:#333;
+  overflow: hidden;
+  position: relative;
+}
+
+.topnav a {
+  float: right;
+  color:#FFFEF2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color:#FFFEF2;
+  color: black;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+label.logo{
+    font-size: 35px;
+    line-height:30px;
+    padding: 15 15px;
+    font-weight: bold;
+    text-align:left;   
+    
+}
+
+@media screen and (max-width: 600px)
+ {
+    .headnav a
+    {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+    }
+
+ }
+ 
+ .Finde
+ {
+ border-radius:12px;
+ background-color:rgb(217, 129, 15); 
+ top: 55%;
+ color: white;
+ font-size: 16px;
+ padding: 12px;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px; 
+ margin-left: 35px;
+ }
+
+.p
+{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode',
+   Geneva, Verdana, sans-serif;
+   display: inline;
+   line-height: 5px;
+}
+
+.container
+{
+width:  80%;
+padding: 20px;
+margin:100px auto;
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+}
+
+.box
+{
+width: 350px;
+margin: 0 10px;
+box-shadow: 0 0 20px 2px rgba(0,0,0 .1);
+transition: 1s;
+
+}
+.box img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+.box:hover{
+  transform: scale(1.3);
+  z-index:2;
+
+}
+
+@media screen and (max-width: 992px)
+{
+  .container {
+    width: 100%;
+  
+  }
+  .box img
+  {width: 300px;
+    height: 485px;
+
+  }
+}
+ 
+/* Solid border divider  */
+hr.solid {
+  border-top: 1px solid #ccc;
+}
+
+
+.icon-box { /* style icon container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+   
+}
+
+.shapes {
+  float: left;
+  width: 33.33%;
+  color:white;
+ 
+}
+
+.icon-box:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {  
+  /* When screen is less than 600px let the column width be 100 % */
+  .shapes {
+    width: 100%;
+  }
+}
+
+.copyright{
+  color:white;
+  border: 1px black solid;
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+  font-family:Montserrat,sans-serif;
+  background-color: #333;
+}
+
+.Footer {
+  background:rgb(217, 129, 15);
+}
+.column {
+  float: left;
+  width: 33.33%;
+  color: #ccc;
+  
+}
+
+
+
+/* Clear floats after the columns */
+.Footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {  
+  /* When screen is less than 600px let the column width be 100 % */
+  .column {
+    width: 100%;
+  }
+}
+
+/* Reference: W3 Schools , Refernece :https://www.youtube.com/watch?v=Zz8A4NqoLrE*/

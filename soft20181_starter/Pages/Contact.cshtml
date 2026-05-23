@@ -1,0 +1,82 @@
+﻿@page
+@model soft20181_starter.Pages.ContactModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Eventbox Contacts";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" type="text/css" href="contact.css" media="all" />
+    <script src="https://kit.fontawesome.com/ca93055bb3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    @* Header Section Start *@
+    <header>
+        <ul>
+            <li><a href="SignUp" class="no-change">Sign Up</a></li>
+            <li><a href="Login" class="no-change">Log In</a></li>
+            <div class="no-change">
+                <div class="Logo">
+                    <label>Eventbox</label>
+                </div>
+            </div>
+        </ul>
+
+        <div class="topnav" id="myTopnav">
+            <a href="Contact" class="active">Contact</a>
+            <a href="EventDetail">Details</a>
+            <a href="Events">Events</a>
+            <a href="Index">Home</a>
+            <i class="fa-solid fa-sun" style="font-size:35px; padding-right: 5px;" onclick="switchToLightMode()"></i>
+            <i class="fa-solid fa-moon" style="font-size:35px; padding:5px;" onclick="switchToDarkMode()"></i>
+            <i class="fa-solid fa-plus" style="font-size:35px; padding: 5px;" onclick="increaseFontsize()"></i>
+            <i class="fa-solid fa-minus" style="font-size:35px; padding: 5px;" onclick="increaseFontsize()"></i>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    @* Header Section End *@
+
+    <div class="contact-form">
+        <h2 class="header">Contact us</h2>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="success">Thank you <span>@TempData["SenderName"]</span>. We will be in touch shortly.</div>
+        }
+
+        <div>
+            <form method="post">
+                <label asp-for="@Model.ContactInfo.FName">First name:</label><br>
+                <input asp-for="@Model.ContactInfo.FName"><br>
+                <span asp-validation-for="@Model.ContactInfo.FName" class="text-danger"></span>
+                <br><br>
+                <label asp-for="@Model.ContactInfo.Phone">Phone number:</label><br>
+                <input asp-for="@Model.ContactInfo.Phone"><br><br>
+                <span asp-validation-for="@Model.ContactInfo.Phone" class="text-danger"></span>
+                <br><br>
+                <label asp-for="@Model.ContactInfo.Email">Email:</label><br>
+                <input asp-for="@Model.ContactInfo.Email"><br><br>
+                <span asp-validation-for="@Model.ContactInfo.Email" class="text-danger"></span>
+                <br><br>
+                <textarea asp-for="@Model.ContactInfo.Message" placeholder="Message"></textarea>
+                <span asp-validation-for="@Model.ContactInfo.Message"></span>
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+</body>
+</html>

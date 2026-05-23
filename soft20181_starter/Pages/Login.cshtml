@@ -1,0 +1,92 @@
+﻿@page
+@model LoginModel
+@{
+	Layout = "_Layout";
+	ViewData["Title"] = "Login page";
+   
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" type="text/css" href="Login.css" media="all" />
+    <script src="https://kit.fontawesome.com/ca93055bb3.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<body>
+    @*  Header Section Start *@
+    <header>
+        <ul>
+            <li> <a href="SignUp" class="no-change"> Sign Up </a></li>
+            <li> <a href="Login" class="no-change" class="active">Log In     </a> </li>
+
+
+            <!--div containing Label to ensure separate styling-->
+            <div class="no-change">
+                <div class="Logo">
+                    <label>Eventbox </label>
+                </div>
+            </div>
+
+        </ul>
+
+
+        <div class="topnav" id="myTopnav">
+            <!--Links to other pages-->
+            <a href="Contact">Contact</a>
+            <a href="EventDetail"> Details </a>
+            <a href="Events" > Events </a>
+            <a href="\EVENT BROOKER\index.html">Home</a>
+            <!--this contains the icons that would be displayed in the top left section of the topnav-->
+            <i class="fa-solid fa-sun" style="font-size:35px; padding-right: 5px;" onclick="switchToLightMode()"></i>
+            <i class="fa-solid fa-moon" style="font-size:35px; padding:5px;" onclick="switchToDarkMode()"></i>
+            <i class="fa-solid fa-plus" style="font-size:35px; padding: 5px;" onclick="increaseFontsize()"> </i>
+            <i class="fa-solid fa-minus" style="font-size: 35px; padding: 5px;" onclick="increaseFontsize()"></i>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    @*  Header Section End *@
+
+    <br>
+    <br>
+    <form action="/submit_login" method="post">
+        <div class="container">
+            <div class="section">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required class="form-control">
+            </div>
+
+            <div class="section">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required class="form-control">
+            </div>
+
+            <button type="submit">Login</button>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   
+</body>
+

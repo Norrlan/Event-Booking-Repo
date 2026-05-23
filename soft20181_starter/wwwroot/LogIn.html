@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "LogIn.css" >
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <script src = " INDEX.JS"> </script>
+    <script src="https://kit.fontawesome.com/ca93055bb3.js" crossorigin="anonymous"></script>
+    <title>Log In Page</title>
+</head> 
+ 
+<body>
+    <ul>
+      <li> <a  href ="C:\Users\obabi\Desktop\EVENT BROOKER\SignUp.html"> Sign Up </a></li>
+      <li> <a href = "#log"  class="active">Log In     </a> </li>
+        
+      <div class="Logo"> 
+        <label>Eventbox </label>
+      </div>
+    </ul>
+        
+<div class="topnav" id="myTopnav">
+    <a href ="C:\Users\obabi\Desktop\EVENT BROOKER\contact.html" >Contact</a>
+    <a href = "C:\Users\obabi\Desktop\EVENT BROOKER\event-detail.html"> Details </a>
+    <a href = "C:\Users\obabi\Desktop\EVENT BROOKER\events.html"> Events </a>
+    <a href ="C:\Users\obabi\Desktop\EVENT BROOKER\index.html">Home</a>
+      <!--this contains the icons that would be displayed in the top left section of the topnav-->
+    <i class="fa-solid fa-sun" style="font-size:30px; padding: 10px;">  </i>
+    <i class="fa-solid fa-moon"  style="font-size:30px;padding: 10px;"></i>
+    <i class="fa-solid fa-plus"  style="font-size:30px;padding: 10px;"></i>
+    <i class="fa-solid fa-minus"  style="font-size:30px;padding: 10px;"></i>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+<form  id ="check-logs" action="#"  onsubmit="return  Ifempty()" > 
+        <div class ="container"> 
+
+         <br> <br>
+         <div class ="EM"> 
+        <label for ="emai"> Username</label> 
+        <br> 
+    </div>
+        
+        <input type = "text" id ="email" name="email" placeholder="Email Address">
+        <br>  <br>
+    
+        <div class ="EM" > 
+        <label for ="pass"> Password</label>
+        <br>
+    </div>
+    
+      
+        <input type = "text" id ="pass" name="pass" placeholder="Password">
+        <br>
+
+</div>
+
+
+<!--Button for submission -->
+
+<div class ="center-container"> 
+<br> <br> <input type="submit" class ="button" value = "Log In">
+
+</div>
+
+
+</form>
+
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr class="solid">
+
+
+<div class ="icon-box">
+
+  <div class = "shapes"> 
+<i class="fa-solid fa-user-clock" style="font-size:60px;"> </i>
+<p>24hrs Customer Service</p>
+</div>
+
+<div class = "shapes"> 
+<i class="fa-solid fa-lock" style="font-size:60px;"></i>
+<p>Secure Bookings</p>
+</div>
+
+<div class = "shapes"> 
+<i class="fa-solid fa-people-group" style="font-size:60px;"></i>
+<p>Group Discounts</p>
+</div>
+
+<div class = "shapes"> 
+<i class="fa-solid fa-trophy" style="font-size:60px;"></i>
+<p>Loyalty Bonus</p>
+</div>
+
+</div>
+<br>
+
+</div>
+
+
+<div class = "Footer"> 
+  <div class="column">
+    <h4>Elysium</h4>
+    <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\welcome.html"> Welcome </a> </p>
+    <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\index.html">Home </a></p>
+    <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\index.html#prize">Prices</a></p>
+    <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\event-detail.html">Details </a>  </p>
+    </div>
+    
+    <div class="column">
+      <h4>Events</h4>
+      <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\events.html">Find</a></p>
+      <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\event-detail.html#Nottingham-1">Nottingham</a></p>
+      <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\event-detail.html#Derby-1">Derby</a></p>
+      <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\event-detail.html#Sheffield-1">Sheffield</a></p>
+      </div>
+      
+      
+      <div class="column">
+      <h4>Support</h4>
+      <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\contact.html">Contact</a></p>
+      <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\Support.html#FAQ">FAQ's </a></p>
+      <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\Support.html#Complaints">Complaints</a></p>
+      <p><a href="C:\Users\obabi\Desktop\EVENT BROOKER\Support.html">Refund </a></p>
+    </div>
+
+</div>
+
+<div class=" copyright"> 
+<p>Oluwanifise Korede Obabire N1116021 © Elysium 2023</p>
+</div>
+
+
+<script>  
+  function  Ifempty() 
+  {
+
+ var name = document.getElementById("name").value;
+ var pass = document.getElementById("pass").value;
+
+
+ 
+ var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+ if
+ (
+  name === "" ||
+  pass === ""  
+ )
+
+ {
+    alert("please fill  in the  empty  fields");
+    return false;
+  }
+
+  alert("Submitted Successfully");
+return true;
+
+if(!namePattern.test(name)){
+  alert ("Invalid email format");
+  return false;
+}
+
+
+alert("Form submitted successfully");
+return true;
+
+
+  }
+  
+  </script>
+
+
+</body>
+</html>

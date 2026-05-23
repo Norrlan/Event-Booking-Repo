@@ -1,0 +1,292 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ca93055bb3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="BIG.css">
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    
+    
+    <title>Eventbox - Centre Of It all</title>
+</head>
+<body>
+
+    @*  Header Section Start *@
+    <header>
+        <ul>
+            <li> <a href="SignUp" class="no-change"> Sign Up </a></li>
+            <li> <a href="Login" class="no-change">Log In     </a> </li>
+
+
+            <!--div containing Label to ensure separate styling-->
+            <div class="no-change">
+                <div class="Logo">
+                    <label>Eventbox </label>
+                </div>
+            </div>
+
+        </ul>
+
+
+        <div class="topnav" id="myTopnav">
+            <!--Links to other pages-->
+            <a href="Contact">Contact</a>
+            <a href="EventDetail"> Details </a>
+            <a href="Events"> Events </a>
+            <a href="AddEvent"> CreateEvent </a>
+            <a href="\EVENT BROOKER\index.html" class="active">Home</a>
+            <!--this contains the icons that would be displayed in the top left section of the topnav-->
+            <i class="fa-solid fa-sun" style="font-size:35px; padding-right: 5px;" onclick="switchToLightMode()"></i>
+            <i class="fa-solid fa-moon" style="font-size:35px; padding:5px;" onclick="switchToDarkMode()"></i>
+            <i class="fa-solid fa-plus" style="font-size:35px; padding: 5px;" onclick="increaseFontsize()"> </i>
+            <i class="fa-solid fa-minus" style="font-size: 35px; padding: 5px;" onclick="increaseFontsize()"></i>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    @*  Header Section End *@
+
+    <!--This section contains an image that has text at an absolute position.
+      There woould also be a button linking user to welcome page -->
+    <!--Banner Section-->
+    <div class="banner">
+        <!--banner Image-->
+        <img src="IMAGES\A24.jpg" alt="fireworks" style="width:100%;" >
+        <!--  I need space for Welcome Page Button -->
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <button class="welcome"><a href="welcome.html"> Welcome To Eventbox </a>  </button>
+    </div>
+
+
+    <!-- Heading Section -->
+    <h2 id="prize" style="text-align: center;color: #fffff3; font-size: 38px;">Prices </h2>
+    <h2 style="text-align: center; font-size: 18px; color: #fffff3; "> Signup for free then pick a plan of your choice </h2>
+    <!-- Price Box Section -->
+    <div class="Price-Box">
+        <!-- Basic Plan -->
+        <div class="Price">
+
+            <div class="tag">
+                <h2 style="background: rgb(217, 129, 15);color:black; padding: 15px; border-radius: 6px;">Basic Plan</h2>
+                <h4>General admission to the event.</h4>
+                <h4>Access to basic facilities.</h4>
+                <h4>No  premium services.</h4>
+                <p>£10.99</p>
+            </div>
+        </div>
+
+        <!-- VIP Plan -->
+        <div class="Price">
+            <div class="tag">
+                <h2 style="background:rgb(217, 129, 15);color:black; padding: 15px; border-radius: 6px;">VIP Plan</h2>
+                <h4>Priority access to event </h4>
+                <h4>VIP seating </h4>
+                <h4>Complimentary catering</h4>
+                <br> <!-- To make it aligned with the other buttons -->
+                <p>£30.00</p>
+            </div>
+        </div>
+
+        <!--Group Plan-->
+        <div class="Price">
+            <div class="tag">
+                <h2 style="background: rgb(217, 129, 15);color:black; padding: 15px; border-radius: 6px;">Group Plan</h2>
+                <h4>Simplified group registration process</h4>
+                <h4>Options for group size</h4>
+                <h4>Group bonuses</h4>
+                <p>£20.00</p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- Gallery Section 2 -->
+    <div class="gallery-box">
+        <!-- Gallery Heading -->
+        <h2 style="text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size:38px;border-radius:8px;color:#fffff3; ">
+          Upcoming Events
+        </h2>
+      
+    </div>
+
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="IMAGES\A33.jpg" style="width:100%">
+            <div class="text">Winter Wonderland</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="IMAGES\A34.jpg" style="width:100%">
+            <div class="text">Narnia Nottingham</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="IMAGES\A35.jpg" style="width:100%">
+            <div class="text">Sheffield City Fair</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="IMAGES\A27.jpg" style="width:100%">
+            <div class="text">Christmas Party</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5/ 6</div>
+            <img src="IMAGES\A28.jpg" style="width:100%">
+            <div class="text">Pride Month Gathering</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">6 /6</div>
+            <img src="IMAGES\A29.jpg" style="width:100%">
+            <div class="text">Parents Mental Health Day</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+
+
+    <!-- Horizontal Line -->
+    <hr class="solid">
+    <br>
+
+    <!-- Icon Box Section -->
+    <div class="icon-box">
+
+        <div class="shapes">
+            <i class="fa-solid fa-user-clock" style="font-size:60px;"> </i>
+            <p>24hrs Customer Service</p>
+        </div>
+
+        <div class="shapes">
+            <i class="fa-solid fa-lock" style="font-size:60px;"></i>
+            <p>Secure Bookings</p>
+        </div>
+
+        <div class="shapes">
+            <i class="fa-solid fa-people-group" style="font-size:60px;"></i>
+            <p>Group Discounts</p>
+        </div>
+
+        <div class="shapes">
+            <i class="fa-solid fa-trophy" style="font-size:60px;"></i>
+            <p>Loyalty Bonus</p>
+        </div>
+
+    </div>
+    @* In your specific page (e.g., welcome.html) *@
+    @section Scripts {
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+            /*
+            @*  Header Section Start *@
+            <header>
+            <ul>
+            <li> <a href="SignUp" class="no-change"> Sign Up </a></li>
+            <li> <a href="Login" class="no-change">Log In     </a> </li>
+
+
+            <!--div containing Label to ensure separate styling-->
+            <div class="no-change">
+            <div class="Logo">
+                <label>Eventbox </label>
+            </div>
+            </div>
+
+            </ul>
+
+
+            <div class="topnav" id="myTopnav">
+            <!--Links to other pages-->
+            <a href="Contact">Contact</a>
+            <a href="EventDetail"> Details </a>
+            <a href="Events"> Events </a>
+            <a href="\EVENT BROOKER\index.html" class="active">Home</a>
+            <!--this contains the icons that would be displayed in the top left section of the topnav-->
+            <i class="fa-solid fa-sun" style="font-size:35px; padding-right: 5px;" onclick="switchToLightMode()"></i>
+            <i class="fa-solid fa-moon" style="font-size:35px; padding:5px;"  onclick="switchToDarkMode()"></i>
+            <i class="fa-solid fa-plus" style="font-size:35px; padding: 5px;"  onclick="increaseFontsize()"> </i>
+            <i class="fa-solid fa-minus" style="font-size: 35px; padding: 5px;" onclick="increaseFontsize()"></i>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+            </div>
+            </header>
+            @*  Header Section End *@
+            */
+
+
+        </script>
+    }
+
+   
+
+</body>
+</html>

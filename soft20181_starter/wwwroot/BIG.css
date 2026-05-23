@@ -1,0 +1,427 @@
+
+*{
+  box-sizing:border-box;
+}
+body /* body style*/
+{
+    margin: 0;
+    padding: 0;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: #333;
+}
+h3 {
+  font-size:22px ;
+  font-family:  Neue Plak,-apple-system,BlinkMacSystemFont,
+  Roboto,Helvetica Neue,
+  Helvetica,Tahoma,Arial,sans-serif;
+  margin-left: 15px;
+  font-weight: 600;
+  color: #FFFEF2;
+}
+
+ul{ 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:black;
+  position: -webkit-sticky; 
+  position:relative;
+  top: 0;
+}
+li{
+  float: right;
+
+}
+li a { /* remove text-decoration and make the anchorlinks to be block*/
+  display:block;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover{ /* background - colour */
+  background-color:#FFFEF2;
+  color: #333;
+}
+
+
+label
+{
+  font-size: 47px;
+  float: left;
+  color: #FFFEF2;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+label:hover {
+  color:rgb(217, 129, 15);
+}
+
+@media screen and (max-width:600px)
+{
+label{
+  padding-top: 6px;
+  font-size: 27px;
+}
+}
+
+
+.topnav{
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(217, 129, 15);
+}
+
+.topnav a {
+  float: right;
+  color:#FFFEF2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color:#FFFEF2;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#555;
+  color:#FFFEF2;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+/*  for screens with a maximum width of 900px Hide all navigation links except the first child */
+@media screen and (max-width: 900px) {
+  .topnav a:not(:first-child) {display: none;}
+  /* Style for the hamburger icon */
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+   /* Styles for each link in the responsive navigation */
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+.logo {
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 500;
+
+}
+.banner {
+    position: relative;
+    text-align: center;
+    width:100%;
+}
+.welcome{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  font-size: 30px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(217, 129, 15);
+  border-radius: 12px;
+  transform: translate(-50%, -50%);
+}
+
+.banner .welcome:hover{
+background-color:#ccc;
+color:white;
+}
+.banner.responsive{
+  width: 100%;
+  height: auto;
+}
+
+.banner .welcome a {
+  text-decoration: none;
+  color: black;
+}
+.banner.welcome a:hover{
+  color:white;
+}
+
+
+
+.pic{
+	display: inline-block;
+	text-align:center;
+	width: 33%;
+	float: left;
+}
+figure {
+	overflow: hidden;
+	margin: 0 10px;
+}
+
+.pic img {
+	display: block;
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+  border-radius: 12px;
+}
+.pic #zoom figure img {
+	transform: scale(1);
+	transition: 0.3s ease-in-out;
+}
+.pic #zoom figure:hover img {
+	transform: scale(1.5);
+}
+
+
+.Price-Box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 30px;
+  padding-left: 8px;
+  column-gap: 30px;
+  margin-right: 28px;
+
+}
+.Price {
+  float: left;
+  width:300px;
+  height: 352px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px black solid;
+  border-radius: 7px;
+  margin-bottom: 20px;
+ 
+}
+.Price p{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 25px;
+}
+.Price:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tag{
+
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  color:white;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 800px) {
+  .Price{
+    width: 100%;
+  }
+}
+/**** For the Slideshow*/
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
+}
+
+
+/* Solid border divider  */
+hr.solid {
+  border-top: 1px solid #ccc;
+}
+
+
+.Footer {
+  background:rgb(217, 129, 15);
+}
+.column {
+  float: left;
+  width: 33.33%;
+  color: #ccc;
+  
+}
+
+.icon-box { /* style icon container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+   
+}
+
+.shapes {
+  float: left;
+  width: 33.33%;
+  color:white;
+ 
+}
+
+.icon-box:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {  
+  /* When screen is less than 600px let the column width be 100 % */
+  .shapes {
+    width: 100%;
+  }
+}
+
+
+
+.copyright{
+  color:white;
+  border: 1px black solid;
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+  font-family:Montserrat,sans-serif;
+  background-color: #333;
+}
+
+.Footer {
+  background:rgb(217, 129, 15);
+}
+.column {
+  float: left;
+  width: 33.33%;
+  color: #ccc;
+  
+}
+
+
+
+/* Clear floats after the columns */
+.Footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {  
+  /* When screen is less than 600px let the column width be 100 % */
+  .column {
+    width: 100%;
+  }
+}

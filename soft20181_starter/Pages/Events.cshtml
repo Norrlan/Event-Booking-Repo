@@ -1,0 +1,136 @@
+﻿@page
+@model soft20181_starter.Pages.EventsModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Events page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ca93055bb3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <title>Elysium Events</title>
+</head>
+
+<body>
+
+    @* Header Section Start *@
+    <header>
+        <ul>
+            <li><a href="SignUp" class="no-change">Sign Up</a></li>
+            <li><a href="Login" class="no-change">Log In</a></li>
+            <div class="no-change">
+                <div class="Logo">
+                    <label>Eventbox</label>
+                </div>
+            </div>
+        </ul>
+
+        <div class="topnav" id="myTopnav">
+            <i class="fa-solid fa-sun" style="font-size:35px; padding-right: 5px;" onclick="switchToLightMode()"></i>
+            <i class="fa-solid fa-moon" style="font-size:35px; padding:5px;" onclick="switchToDarkMode()"></i>
+            <i class="fa-solid fa-plus" style="font-size:35px; padding: 5px;" onclick="increaseFontsize()"></i>
+            <i class="fa-solid fa-minus" style="font-size: 35px; padding: 5px;" onclick="decreaseFontsize()"></i>
+            <a href="Contact">Contact</a>
+            <a href="EventDetail">Details</a>
+            <a href="Events" class="active">Events</a>
+            <a href="AddEvent">CreateEvent</a>
+            <a href="Index">Home</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    @* Header Section End *@
+
+    <p class="events-intro">
+        Unlock a world of possibilities with our event recommendations.
+        Whether you're a seasoned local or a first-time visitor,
+        there's always something new to discover. From cultural festivals to live performances,
+        dive into the maze of events at the touch of a button.
+    </p>
+
+    <h1 class="events-heading">Upcoming Events</h1>
+
+    <div class="events-grid">
+        @foreach (var theEvent in @Model.Events)
+        {
+            var coverPhoto = theEvent.CoverPhoto ?? string.Empty;
+            coverPhoto = coverPhoto.Replace("\\", "/");
+            var imagePath = coverPhoto.StartsWith("/") || coverPhoto.StartsWith("http")
+                ? coverPhoto
+                : $"/IMAGES/{coverPhoto}";
+
+            <article class="event-card">
+                <img class="event-thumbnail" src="@imagePath" alt="@theEvent.Title" onerror="this.src='/IMAGES/A24.jpg';" />
+                <div class="event-card-body">
+                    <h2>@theEvent.Title</h2>
+                    <p class="event-date">@theEvent.EventStartDate.ToString("ddd dd MMM yyyy"), @theEvent.EventStartTime.ToString("HH:mm") - @theEvent.EventEndTime.ToString("HH:mm")</p>
+                    <p class="event-location">@theEvent.ELocation</p>
+                    <p class="event-description">@theEvent.EventDescription</p>
+                    <div class="event-meta">
+                        <span>From £@theEvent.Price.ToString("0.00")</span>
+                        <span>@theEvent.TicketsAvailable tickets</span>
+                    </div>
+                    <a class="event-link" asp-page="EventDetail" asp-route-id="@theEvent.Id">View details</a>
+                </div>
+            </article>
+        }
+    </div>
+
+
+  
+
+    @section Scripts {
+        <script>
+            filterSelection("all")
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("filterDiv");
+                if (c == "all") c = "";
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+            }
+
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+                }
+            }
+
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
+    }
+
+</body>
+</html>

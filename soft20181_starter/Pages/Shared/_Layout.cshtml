@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - soft20181_starter</title>
+
+    @*  Section for CSS Start *@
+  
+    @*  Section for CSS Start *@
+
+</head>
+<body>
+
+ 
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    @*  Footer Section Start *@
+    <div class="Footer">
+        <!-- Columns -->
+
+        <div class="Footer">
+            <div class="column">
+                <h4>Elysium</h4>
+                <p><a href="welcome.html"> Welcome </a> </p>
+                <p><a href="index.html">Home </a></p>
+                <p><a href="contact.html">Contact</a></p>
+                <p><a href="event-detail.html">Details </a>  </p>
+            </div>
+
+            <div class="column">
+                <h4>Events</h4>
+                <p><a href="events.html">Find</a></p>
+                <p><a href="event-detail.html#Nottingham-1">Nottingham</a></p>
+                <p><a href="event-detail.html#Derby-1">Derby</a></p>
+                <p><a href="event-detail.html#Sheffield-1">Sheffield</a></p>
+            </div>
+
+
+
+        </div>
+
+        <!-- Copyright Section -->
+       
+        <div class=" copyright no-change">
+            <h5>Oluwanifise Korede Obabire  © Eventbox 2023</h5>
+        </div>
+   </div>
+
+    @*  Footer Section End *@
+
+
+    @*  Add Site Wide JavaScript Start *@
+
+        <script>
+
+            //function to toggle the responsive class for top nav
+function myFunction() {
+   // Get the HTML element with the ID "myTopnav" and assign it to the variable x
+  var x = document.getElementById("myTopnav");
+  
+  // Check if the class name of the element is currently "topnav"
+  if (x.className === "topnav") {
+    // If it is, append the "responsive" class to the element's class list
+    x.className += " responsive";
+  } else {
+     // If it's not, set the class name to "topnav"
+    x.className = "topnav";
+  }
+}
+  
+       document.addEventListener("DOMContentLoaded", function () {
+            // If darkMode doesn't exist in the LocalStorage, create it. False by default
+            if (localStorage.getItem('darkMode') === null) {
+                localStorage.setItem('darkMode', "false");
+            }
+
+            // Check if preferences are stored in Local Storage
+            const storedFontSize = localStorage.getItem("fontSize") || "16px"; // Default font size 
+            checkStatus();
+            setFontSize(storedFontSize);
+
+            function checkStatus() {
+                if (localStorage.getItem('darkMode') === "true") {
+                    switchToDarkMode();
+                } else {
+                    switchToLightMode();
+                }
+            }
+
+            function switchToDarkMode() {
+                localStorage.setItem('darkMode', "true");
+                document.body.style.backgroundColor = "#181A1B";
+                document.body.style.color = "#FFF";
+                document.getElementById("myTopnav").style.backgroundColor = "rgb(217, 129, 15)";
+                setTextColor("#DCDCDC");
+                setHrColor("#ccc"); // set color to white in dark mode
+            }
+
+            function switchToLightMode() {
+                localStorage.setItem('darkMode', "false");
+                document.body.style.backgroundColor = "#D3D3D3";
+                document.body.style.color = "#000";
+                document.getElementById("myTopnav").style.backgroundColor = "#FFFFFF";
+                setTextColor("#000");
+                setHrColor ("#000")// set color to black inn lightmode .
+            }
+
+            function setTextColor(color) {
+                document.querySelectorAll("h1, h2, h3, h4, p, a, li, .column h4, .column p").forEach((element) => {
+                    if (!element.classList.contains('no-change')) {
+                        element.style.color = color;
+                    }
+                });
+            }
+            // function to change hr color
+            function setHrColor(color){
+                document.querySelectorAll("hr.solid").forEach((element) => {
+                    element.style.borderTop = `1px solid ${color}`;
+                });
+            }
+            // function to increase/decrease the fonct size of the text 
+            function setFontSize(fontSize) {
+                document.querySelectorAll("h1, h2, h3, h4, p").forEach((header) => {
+                    header.style.fontSize = fontSize;
+                });
+                localStorage.setItem("fontSize", fontSize);
+            }
+
+            function increaseFontSize() {
+                const currentSize = parseInt(getComputedStyle(document.body).fontSize);
+                const newSize = currentSize + 2;
+                setFontSize(newSize + "px");
+            }
+
+            function decreaseFontSize() {
+                const currentSize = parseInt(getComputedStyle(document.body).fontSize);
+                const newSize = currentSize - 2;
+                setFontSize(newSize + "px");
+            }
+
+            document.querySelector(".fa-sun").addEventListener("click", switchToLightMode);
+            document.querySelector(".fa-moon").addEventListener("click", switchToDarkMode);
+            document.querySelector(".fa-plus").addEventListener("click", increaseFontSize);
+            document.querySelector(".fa-minus").addEventListener("click", decreaseFontSize);
+        });
+
+        </script>
+
+    @*  Add Site Wide JavaScript End *@
+
+
+    @*  Section for Scripts Start *@
+    @await RenderSectionAsync("Scripts", required: false)
+    
+    @*  Section for Scripts End *@
+
+</body>
+</html>

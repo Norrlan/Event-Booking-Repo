@@ -1,0 +1,47 @@
+{
+    "cardDeck1": {
+        "deckClass": "Card-deck-1",
+        "events": [
+            {
+                "imageSrc": "C:/Users/obabi/Desktop/EVENT BROOKER/imagez/A30.jpg",
+                "eventName": "Victorian Christmas Market",
+                "place": "(Sheffield)",
+                "datename": "2 and 3 Dec",
+                "link": "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html"
+            },
+            {
+                "imageSrc": "C:/Users/obabi/Desktop/EVENT BROOKER/imagez/A35.jpg",
+                "eventName": "Firth Park Xmas Market",
+                "place": "(Sheffield)",
+                "datename": "9 Dec",
+                "link": "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html#Sheffield-2"
+            }
+        ]
+    },
+    "cardDeck2": {
+        "deckClass": "Card-deck-2",
+        "events": [
+            {
+                "imageSrc": "C:/Users/obabi/Desktop/EVENT BROOKER/imagez/A34.jpg",
+                "eventName": "Narnia at Newstead",
+                "place": "(Nottingham)",
+                "datename": "25 Nov - 1 Dec",
+                "link": "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html#Nottingham-2"
+            },
+            {
+                "imageSrc": "C:/Users/obabi/Desktop/EVENT BROOKER/imagez/A31.webp",
+                "eventName": "Ultimate 90s Party",
+                "place": "(Derby)",
+                "datename": "Aug 31",
+                "link": "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html#Derby-1"
+            },
+            {
+                "imageSrc": "C:/Users/obabi/Desktop/EVENT BROOKER/imagez/A32.webp",
+                "eventName": "VR Northern Lights Experience",
+                "place": "(Derby)",
+                "datename": "9th Dec-9th Jan",
+                "link": "C:/Users/obabi/Desktop/EVENT BROOKER/event-detail.html#Derby-2"
+            }
+        ]
+    }
+}
